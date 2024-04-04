@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiTabbed.MainPage"
+            xmlns:views="clr-namespace:MauiTabbed.Views" 
+             BackgroundColor="Yellow">
+
+    <NavigationPage Title="Home">
+        <x:Arguments>
+            <ContentPage Title="Home" BackgroundColor="Aquamarine">
+                <Button x:Name="ToogleBtn"
+                        Text="Toogle Tab" 
+                        Clicked="ToggleTab"/>
+            </ContentPage>
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="Toggled Tab">
+        <x:Arguments>
+            <views:NewPage/>
+        </x:Arguments>
+    </NavigationPage>
+</TabbedPage>
